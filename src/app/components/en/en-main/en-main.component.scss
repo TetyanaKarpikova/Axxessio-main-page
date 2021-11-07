@@ -1,0 +1,476 @@
+.fundamental {    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;   
+    height: 100vh;
+}
+.header {    
+     
+}
+.mute-video {
+    border-radius: 50%;
+    height:30px;
+    width: 30px;
+    position: absolute;
+    top: 100px;
+    left: 10px;   
+}
+
+.main-menu {
+    position: absolute;
+    left: 1%;
+    top: 12%;
+    color: white;
+    text-transform: uppercase;  
+    &__item {
+        list-style-type: circle;
+        margin-top: 3px;
+    }
+    &__item:hover {
+        list-style-type: disc;
+    }
+}
+
+
+
+.main-video {
+    width: 100%;
+    height: fit-content;
+}
+.video-top {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+}
+
+.arrow-top {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    height: 100px;
+    border: transparent;
+    text-align: center;
+
+}
+.arrow-big {
+    border: solid white;
+    border-width: 0 7px 7px 0;
+    display: inline-block;    
+    margin: 0 auto;
+    padding: 10px;    
+    transform: translateY(-45%) rotate(45deg);
+    cursor: pointer;
+    opacity: 0.7;
+    animation: arrow-big 2s infinite linear alternate; 
+}
+
+.main {    
+    grid-area: main;
+}
+.rubric {
+    h3 {
+        font-weight: 800;
+        font-size: 17px;
+        text-transform: uppercase;
+    }
+    &_background-dark {
+        background-color: #1f6a88;
+    }
+    &_color-white {
+        color: white;
+    }
+   
+}
+
+.rubric-text {    
+    padding: 10px 30px;
+    text-align: center;
+    font-size: 14px;  
+    line-height: 18px;
+    font-weight: 300; 
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.group-card {
+    display: grid;
+    grid-template-areas: "voice industry smart"
+                          "intellig management security";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    width: 80%;    
+    height: auto;
+    margin: 0 auto;
+}
+.wrapper-card {
+    margin: 15px;    
+    &_voice {
+        grid-area: voice;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    &_industry {
+        grid-area: industry;
+    }
+    &_smart {
+        grid-area: smart;
+       
+    }
+    &_intellig {
+        grid-area: intellig;
+    }
+    &_management {
+        grid-area: management;
+        
+    }
+    &_security {
+        grid-area: security;
+    }
+}
+.round-card {
+    position: relative;    
+    width: 100%;    
+    height: 100%;
+    perspective: 1000px;        
+    justify-content: center;    
+    
+}
+
+.card-white, .card-dark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s;
+    backface-visibility: hidden;
+    background-color: white;
+    text-align: center;
+}
+
+.card-white {
+    margin: 0 20px;
+    padding-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+.card-dark {
+    transform: rotateX(180deg);
+    background-color: #1f6a88;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.round-card:hover .white {
+    transform: rotateX(180deg);
+}
+
+.round-card:hover .card-dark {
+    transform: rotateX(360deg);
+}
+
+.icon-card {
+    width: 100px;
+    max-width: 100px;
+    height: 100px;
+    max-height: 100px;
+    display: inline-block;
+    img {
+        width:100%;
+    }
+}
+
+.info-card {
+    margin: 0;
+    h4 {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 17px;
+    }
+    &_down {
+        margin: 15px 0;
+    }
+}
+.name-card {
+    text-transform: uppercase;
+}
+
+.description-card {
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.more-info__btn {
+    background-color: #1f6a88;
+    color: white;
+    border: 1px solid white;
+    margin: 20px;
+    padding: 5px;
+    width: 50%;
+    height: 30px;
+    font-size: 15px;
+    &:hover {
+        background-color: white;
+        color: #1f6a88;        
+    }
+    
+    &_white {
+        background-color: white;
+        border: 1px solid #1f6a88;
+        color: #1f6a88;
+    }
+    &_hover:hover {
+        background-color: #1f6a88;
+        color: white;
+        border: 1px solid white;
+    }
+    &_brown {
+        background-color: #3c3c3b;
+        color: white;
+        border: 1px solid white;         
+        width: 200px;     
+    }
+    &_brown:hover {
+        background-color: white;
+        color: #3c3c3b;
+        border: 1px solid #3c3c3b;
+    }   
+}
+
+.wrapper-video {
+    overflow: hidden;
+    width: 100%;
+    height: auto;    
+    video {
+        width: 100%;
+        height: auto;
+        margin-top: -7%;
+        margin-bottom: -30%;
+    }
+}
+.video2 {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+.group-service {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+}
+
+.box-service {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    text-align: center;
+    margin: 10px;
+}
+
+.image-service {
+    width: 100%;
+    height: 100%;    
+    height: auto;
+    img {
+        width: 100%;
+    }
+
+}
+.customers {
+    display: flex;
+    flex-direction: column;     
+    text-align: center;
+    background-color: rgb(235, 235, 235);
+    height: auto;
+    h3{
+        text-transform: uppercase;
+    }
+}
+.wrapper-logo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+    justify-content: space-around;    
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo-customer {
+    width: auto;
+    max-width: 150px;
+    height: 70px;
+    filter: grayscale(100%);
+    flex: 0 0 50%;
+    margin: 30px;
+    &:hover {
+        filter: grayscale(0);
+    }
+    &_bigger {
+        max-width: 250px;            
+    }
+}
+
+.footer {
+    background-color: #3c3c3b;    
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    font-size: 15px;   
+}
+.wrapper-footer{
+    margin: 20px 30px;
+    text-align: center;
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+.address {
+    margin: 10px 0;
+    line-height: 20px;
+    &__city {
+        font-weight: 800;
+    }
+}
+.contact {
+    margin-top: 20px;
+    line-height: 20px;
+}
+
+.direction-btn {
+    width: 200px;
+    margin-top: 10px;    
+}
+
+.wrapper-cookie {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #dadad9;
+    color: black;
+    padding: 0 30px;
+    opacity: 0.9;
+    text-align: center;
+        a{
+        color: grey;        
+    }
+    p {
+        margin: 0;
+    }
+}
+
+.square-small {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 3px solid rgb(16, 117, 16);
+    text-align: center;
+    cursor: pointer;
+}
+
+.arrow {
+    border: solid rgb(16, 117, 16);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px;    
+    transform: translateY(-50%) rotate(45deg);
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px){
+    .group-card {
+        grid-template-areas: "voice"
+                             "industry"
+                             "smart"
+                             "intellig"
+                             "management"
+                             "security";
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 300px 300px 300px 300px 300px;
+    }
+
+    .arrow-top {
+        top: 60%;
+    }
+    .wrapper-video {      
+        width: 100%;
+        height: auto;    
+        video {
+            width: 100%;
+            height: auto;     
+            margin-bottom: 0;       
+        }
+    }
+    .group-service {
+        display: flex;
+        flex-direction: column;      
+    }
+    .logo-customer {
+        width: auto;
+        max-width: 100px;
+        height: 40px;
+        margin: 15px 20px;
+       
+    }
+    .more-info__btn {
+        &_brown {
+            width: 183px;
+        }
+    }
+    .footer {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px){
+    .group-card {
+        grid-template-areas: "voice industry"
+                             "smart intellig"
+                             "management security";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px 300px;
+    }
+    .arrow-top {
+        top: 60%;
+    }
+    .logo-customer {
+        width: auto;
+        max-width: 100px;
+        height: 50px;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px){
+    .more-info__btn {
+        font-size: 13px;
+        width: 60%;               
+    }
+    .arrow-top {
+        top: 60%;
+    }
+}
+
+@keyframes arrow-big {
+    0% {
+        margin-top: 20px;
+        
+    }
+    100% {
+        margin-top: 50px;
+    }
+}

@@ -6,20 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'axxessio-web';
-  isCookie = true;
+  title = 'axxessio-web';  
 
   ngOnInit() {
-    if (localStorage.getItem('cookieAxxessio')) {
-      this.isCookie = false;
-    }
-  }
-
-  save() {
-    localStorage.setItem('cookieAxxessio', 'true');
-    if (localStorage.getItem('cookieAxxessio')) {
-      this.isCookie = false;
-    }
+    // if (localStorage.getItem('cookieAxxessio')) {
+    //   this.isCookie = false;
+    // }
   }
 
 }
