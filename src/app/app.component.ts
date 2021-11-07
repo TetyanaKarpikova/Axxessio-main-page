@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'axxessio-web';
+  isCookie = true;
+
+  ngOnInit() {
+    if (localStorage.getItem('cookieAxxessio')) {
+      this.isCookie = false;
+    }
+  }
+
+  save() {
+    localStorage.setItem('cookieAxxessio', 'true');
+    if (localStorage.getItem('cookieAxxessio')) {
+      this.isCookie = false;
+    }
+  }
+
 }
